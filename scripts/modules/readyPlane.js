@@ -1,6 +1,6 @@
 import showPlane from "./showPlane.js";
 
-const readyPlane = (forms, main) => {
+const readyPlane = (forms, main, tourData) => {
     const data = [];
 
     forms.forEach((form) => {
@@ -18,7 +18,7 @@ const readyPlane = (forms, main) => {
 
             if (forms.length === data.length) {
                 forms.forEach(form => form.remove());
-                showPlane(main, data);
+                showPlane(main, data, tourData);
             }
         });
     })
